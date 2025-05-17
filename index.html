@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Sono", sans-serif;
+      background: #f0eff7;
+      padding: 2rem;
+    }
+
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+
+    .pricing-plan {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      padding: 30px 20px;
+      width: 300px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-plan:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .plan-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .plan-price {
+      font-size: 28px;
+      font-weight: bold;
+      color: #5130d6;
+      margin-bottom: 20px;
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent 0%,
+        #999 30%,
+        #5130d6 50%,
+        #999 70%,
+        transparent 100%
+      );
+      margin: 28px 0;
+      border-radius: 3px;
+    }
+
+    .plan-features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .plan-features li {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .plan-button {
+      display: block;
+      width: 100%;
+      background: #5130d6;
+      color: #ffffff;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .plan-button:hover {
+      background: #3e20b6;
+    }
+
+    /* Responsive layout */
+    @media (max-width: 900px) {
+      .pricing-plan {
+        width: 100%;
+        max-width: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="pricing-container">
+    <div class="pricing-plan plan-basic">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price">$9.99/month</div>
+      <hr />
+      <ul class="plan-features">
+        <li>✔️ 10GB Storage</li>
+        <li>✔️ 1 User</li>
+        <li>✖️ Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</button>
+    </div>
+
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price">$19.99/month</div>
+      <hr />
+      <ul class="plan-features">
+        <li>✔️ 50GB Storage</li>
+        <li>✔️ 5 Users</li>
+        <li>✔️ Phone & Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</button>
+    </div>
+
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price">$49.99/month</div>
+      <hr />
+      <ul class="plan-features">
+        <li>✔️ 100GB Storage</li>
+        <li>✔️ 10 Users</li>
+        <li>✔️ 24/7 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</button>
+    </div>
+  </div>
+</body>
+</html>
